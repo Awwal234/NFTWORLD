@@ -45,4 +45,15 @@ main {
   font-family: Satochi Variable;
   min-height: 100vh;
 }
+
+body::-webkit-scrollbar {
+  width: 3px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 3px;
+  background: #DE5A10;
+  border-radius: 4px;
+}
 </style>

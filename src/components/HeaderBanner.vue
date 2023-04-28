@@ -1,7 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import SignForm from './SignForm.vue';
 
 export default defineComponent({
+    components: {
+        SignForm,
+    },
     data() {
         return {
             home: 'Home' as string,
@@ -12,10 +16,10 @@ export default defineComponent({
         }
     },
     methods: {
-        openMenu(){
+        openMenu() {
             this.menu = true;
         },
-        closeMenu(){
+        closeMenu() {
             this.menu = false;
         }
     }
@@ -45,7 +49,7 @@ export default defineComponent({
         <!---->
         <div v-show="menu" class="fixed w-full pb-[50px] overflow-y-scroll left-0 top-0 h-full menu_wrap">
             <div
-                class="mt-[108px] pt-[24px] rounded-[8px] h-[801px] mx-auto md:w-[600px] bg-[#fff] lg:w-[800px] xlg:w-[1038px]">
+                class="mt-[108px] pt-[24px] rounded-[8px] h-fit mx-auto md:w-[600px] bg-[#fff] lg:w-[800px] xlg:w-[1038px]">
                 <!--head tab-->
                 <div class="flex items-center px-[96px] mx-auto">
                     <div
@@ -61,6 +65,7 @@ export default defineComponent({
                     </div>
                 </div>
                 <!--close head tab-->
+                <SignForm />
                 <!--contents-->
             </div>
         </div>
